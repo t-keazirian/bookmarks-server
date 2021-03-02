@@ -1,0 +1,26 @@
+{"message":"Unauthorized request to path: /bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Bookmark with id 2 not found.","level":"error"}
+{"message":"Bookmark with id 47f86879-ec63-47e6-a1c2-cd3fbc3868b9 created.","level":"info"}
+{"message":"Bookmark with id 1 deleted.","level":"info"}
+{"message":"Bookmark with id c5fa9ba9-03e1-4d49-acec-529385604af6 created.","level":"info"}
+{"message":"Bookmark with id bf2d7ece-f7e3-4b7d-a232-be9951453bd5 created.","level":"info"}
+{"message":"Bookmark with id c5fa9ba9-03e1-4d49-acec-529385604af6 deleted.","level":"info"}
+{"message":"Bookmark with id bf2d7ece-f7e3-4b7d-a232-be9951453bd5 deleted.","level":"info"}
+{"message":"Bookmark with id bf2d7ece-f7e3-4b7d-a232-be9951453bd5 not found.","level":"error"}
+{"message":"Title is required","level":"error"}
+{"message":"URL is required","level":"error"}
+{"message":"Description is required","level":"error"}
+{"message":"Bookmark with id 6d27927b-47ab-4159-874e-a42937b7c1fa created.","level":"info"}
+{"message":"Bookmark with id 0e29cbce-f7f6-4584-8598-460b00eb4c4b created.","level":"info"}
+{"message":"Bookmark with id b8add407-09f3-4d12-8fe0-ed07bb6df6f5 created.","level":"info"}
+{"message":"Bookmark with id 3f358e6f-4a37-48d4-aba3-ebed10195630 created.","level":"info"}
+{"message":"Bookmark with id 6d27927b-47ab-4159-874e-a42937b7c1fa deleted.","level":"info"}
+{"message":"Bookmark with id 4c6c53c9-ac3c-47c0-aa13-6c800cf35c4e created.","level":"info"}
+{"message":"Bookmark with id 1 deleted.","level":"info"}
+{"message":"Bookmark with id 1 not found.","level":"error"}
