@@ -17,22 +17,22 @@ bookmarkRouter
 
 		if (!title) {
 			logger.error('Title is required');
-			return res.status(400).send('Invalid data');
+			return res.status(400).send('Title is required');
 		}
 
 		if (!url) {
 			logger.error('URL is required');
-			return res.status(400).send('Invalid data');
+			return res.status(400).send('URL is required');
 		}
 
 		if (!rating) {
 			logger.error('Rating is required');
-			return res.status(400).send('Invalid data');
+			return res.status(400).send('Rating is required');
 		}
 
 		if (!description) {
 			logger.error('Description is required');
-			return res.status(400).send('Invalid data');
+			return res.status(400).send('Description is required');
 		}
 
 		if (!Number.isInteger(rating) || rating < 0 || rating > 5) {
