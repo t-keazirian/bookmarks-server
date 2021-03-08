@@ -1,9 +1,7 @@
 const { expect } = require('chai');
-const express = require('express');
 const knex = require('knex');
 const app = require('../src/app');
 const supertest = require('supertest');
-const BookmarksService = require('../src/bookmarks-service');
 const { makeBookmarksArray } = require('./bookmarks.fixtures');
 
 describe('Bookmarks Endpoint', () => {
@@ -75,4 +73,28 @@ describe('Bookmarks Endpoint', () => {
 			});
 		});
 	});
+
+	describe('POST /bookmarks', () => {
+		it(`creates an article, responding with 201 and the new article`, () => {
+			const newBookmark= {
+				title: 'Test New Bookmark Title',
+				url: 'http://www.testnewbookmark.com',
+				rating: 5,
+				description: 'Test new bookmark description'
+			}
+			return supertest(app)
+				.post('/bookmarks')
+				.set('Authorization', `Bearer ${process.env.API_TOKEN}`)
+				.send(newBookmark)
+				.expect(201)
+				.expect(res => {
+					expect(res.body.title).to.eql(newBookmark.title)
+					expect(res.body.url).to.eql(newBookmark.url)
+					expect(res.body.rating).to.eql(newBookmark.rating)
+					expect(res.body.description).to.eql(newBookmark.description)
+					expect(res.body).to.have.property('id')
+				})
+
+		})
+	})
 });

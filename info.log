@@ -49,3 +49,8 @@
 {"message":"Unauthorized request to path: /","level":"error"}
 {"message":"Unauthorized request to path: /bookmarks","level":"error"}
 {"message":"Unauthorized request to path: /bookmarks/:bookmark_id","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Bookmark with id 8b4f35b5-679d-4321-9a84-48b1fb9041f6 created.","level":"info"}
+{"message":"Bookmark with id fdeded2a-6b4a-48b2-b58a-67eaf85e7e90 created.","level":"info"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Title is required","level":"error"}
