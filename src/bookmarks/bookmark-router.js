@@ -2,6 +2,7 @@ const express = require('express');
 const logger = require('../logger');
 const { isWebUri } = require('valid-url');
 const xss = require('xss');
+const path = require('path');
 
 const bookmarkRouter = express.Router();
 const bodyParser = express.json();
@@ -59,13 +60,29 @@ bookmarkRouter
 		const knexInstance = req.app.get('db');
 		BookmarksService.insertBookmark(knexInstance, newBookmark)
 			.then(bookmark => {
-				res.status(201).location(`/bookmarks/${bookmark.id}`).json(bookmark);
+				res
+					.status(201)
+					.location(path.posix.join(req.originalUrl, `${bookmark.id}`))
+					.json(bookmark);
 			})
 			.catch(next);
 	});
 
 bookmarkRouter
 	.route('/:bookmark_id')
+	.all((req, res, next) => {
+		BookmarksService.getBookmarkById(req.app.get('db'), req.params.bookmark_id)
+		.then(bookmark => {
+			if (!bookmark) {
+				return res.status(404).json({
+					error: {message: `Bookmark doesn't exist`}
+				})
+			}
+			res.bookmark = bookmark;
+			next()
+		})
+		.catch(next)
+	})
 	.get((req, res, next) => {
 		const knexInstance = req.app.get('db');
 		BookmarksService.getBookmarkById(knexInstance, req.params.bookmark_id)
@@ -93,6 +110,31 @@ bookmarkRouter
 				res.status(204).end();
 			})
 			.catch(next);
-	});
+	})
+
+	.patch(bodyParser, (req, res, next) => {
+		const {title, url, description, rating} = req.body;
+		const bookmarkToUpdate = {title, url, description, rating};
+
+		const numberOfValues = Object.values(bookmarkToUpdate).filter(Boolean).length;
+		if (numberOfValues === 0) {
+			return res.status(400).json({
+				error: {
+					message: `Request body must contain either 'title', 'rating', or 'url'`
+				}
+			})
+		}
+
+		const knexInstance = req.app.get('db');
+		BookmarksService.updateBookmark(
+			knexInstance, req.params.bookmark_id, bookmarkToUpdate
+		)
+		.then(() => {
+			res.status(204).end()
+		})
+		.catch(next)
+	})
 
 module.exports = bookmarkRouter;
+
+

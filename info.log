@@ -54,3 +54,33 @@
 {"message":"Bookmark with id fdeded2a-6b4a-48b2-b58a-67eaf85e7e90 created.","level":"info"}
 {"message":"Unauthorized request to path: /","level":"error"}
 {"message":"Title is required","level":"error"}
+{"message":"Unauthorized request to path: /bookmarks/1","level":"error"}
+{"message":"Title is required","level":"error"}
+{"message":"URL is required","level":"error"}
+{"message":"Rating is required","level":"error"}
+{"message":"Title is required","level":"error"}
+{"message":"URL is required","level":"error"}
+{"message":"Title is required","level":"error"}
+{"message":"URL is required","level":"error"}
+{"message":"Title is required","level":"error"}
+{"message":"URL is required","level":"error"}
+{"message":"Unauthorized request to path: /edit/cjozyzeqh0001lxygb8mhnvhz","level":"error"}
+{"message":"Unauthorized request to path: /edit/cjozyzeqh0001lxygb8mhnvhz","level":"error"}
+{"message":"Unauthorized request to path: /edit/cjozyzeqh0001lxygb8mhnvhz","level":"error"}
+{"message":"Unauthorized request to path: /bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/7","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/5","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/3","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/3","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Invalid rating: 1","level":"error"}
+{"message":"Invalid rating: 1","level":"error"}

@@ -27,7 +27,7 @@ app.use(function validateBearerToken(req, res, next) {
 	next();
 });
 
-app.use('/bookmarks', bookmarkRouter);
+app.use('/api/bookmarks', bookmarkRouter);
 
 app.get('/', (req, res) => {
 	res.send('Hello, world!');
@@ -45,3 +45,5 @@ app.use(function ErrorHandler(error, req, res, next) {
 });
 
 module.exports = app;
+
+
