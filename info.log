@@ -84,3 +84,5 @@
 {"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
 {"message":"Invalid rating: 1","level":"error"}
 {"message":"Invalid rating: 1","level":"error"}
+{"message":"Invalid rating: 1","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}

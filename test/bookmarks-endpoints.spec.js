@@ -344,6 +344,7 @@ describe('Bookmarks Endpoint', () => {
 					...testBookmarks[idToUpdate - 1],
 					...updateBookmark,
 				};
+				console.log(expectedBookmark);
 				return supertest(app)
 					.patch(`/api/bookmarks/${idToUpdate}`)
 					.set('Authorization', `Bearer ${process.env.API_TOKEN}`)
